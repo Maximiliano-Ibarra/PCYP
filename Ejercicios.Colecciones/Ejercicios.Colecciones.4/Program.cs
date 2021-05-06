@@ -23,7 +23,7 @@ namespace Ejercicios.Colecciones._4
             Console.WriteLine("Top 10 Users Reviewing Movies");
             foreach (var line in lines.GroupBy(el => el.id_usuario).OrderByDescending(el => el.Count()).Take(10))
             {
-                Console.WriteLine($"{line.Key} : {line.Count()}");
+                Console.WriteLine("{0} : {1}", line.Key, line.Count());
             }
             Console.ReadKey();
         }
